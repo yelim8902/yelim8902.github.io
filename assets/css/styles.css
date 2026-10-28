@@ -281,6 +281,11 @@ strong {
   vertical-align: top;
 }
 
+/* Show at most 5 news items; newest first, older rows stay in the HTML */
+#news .news-table tr:nth-child(n + 6) {
+  display: none;
+}
+
 .awards-table th {
   width: 64px;
 }
