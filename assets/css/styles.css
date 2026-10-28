@@ -394,6 +394,44 @@ strong {
   text-decoration: none;
 }
 
+.more {
+  margin-top: 28px;
+}
+
+.more summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.9375rem;
+  color: var(--text-light);
+}
+
+.more summary::-webkit-details-marker {
+  display: none;
+}
+
+.more summary::before {
+  content: "+";
+  display: inline-block;
+  width: 1em;
+  text-align: center;
+  font-weight: 600;
+}
+
+.more[open] summary::before {
+  content: "−";
+}
+
+.more summary:hover {
+  color: var(--theme);
+}
+
+.more[open] .plain-list {
+  margin-top: 10px;
+}
+
 .plain-list {
   margin: 0;
   padding-left: 20px;
