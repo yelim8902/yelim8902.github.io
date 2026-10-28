@@ -44,7 +44,7 @@ portfolio-website/
 │       └── projects/          # Selected Projects 썸네일 (jipjigi, trace-x, xai-aml)
 ├── cv/
 │   ├── cv.tex                 # LaTeX CV 원본
-│   └── cv.pdf                 # 빌드 결과 (사이트 메뉴 "cv"가 이 파일을 엶)
+│   └── cv.pdf                 # 빌드 결과 (사이트 메뉴 "CV"가 이 파일을 엶)
 ├── archive/                   # 지금은 사이트에서 안 쓰지만 보관하는 파일
 │   ├── images/                # 수상 사진·상장, 예전 프로젝트 썸네일, 예전 프로필
 │   ├── docs/                  # 발표 자료, 상장 PDF
@@ -69,7 +69,7 @@ portfolio-website/
 | 뉴스 추가 | `index.html`의 `#news` 표 **맨 위**에 `<tr>` 추가. 6번째부터는 CSS로 자동 숨김 |
 | 경력 추가 | `#experience`의 `<li class="cv-item has-logo">` 하나 복사. 로고는 `assets/images/logos/`에 넣고 경로 수정 (꽉 찬 정사각형 로고는 `cv-logo-photo` 클래스) |
 | 대표 프로젝트 추가 | `#projects`의 `<li class="pub">` 하나 복사. 썸네일은 `assets/images/projects/` (4:3 비율 권장) |
-| 기타 프로젝트 추가 | `<details class="more">` 안의 `<li>` 복사 후 `more projects (N)` 숫자 수정 |
+| 기타 프로젝트 추가 | `<details class="more">` 안의 `<li>` 복사 후 `More projects (N)` 숫자 수정 |
 | 수상 추가 | `#awards` 표에 `<tr>` 추가 |
 | 프로필 사진 교체 | `assets/images/profile/profile.jpg` 교체. 링크 미리보기용 `og-profile.jpg`(600×600)도 함께 교체 |
 | CV 수정 | `cv/cv.tex` 수정 후 `cd cv && xelatex cv.tex`로 `cv.pdf` 다시 생성 (XeLaTeX 필요) |
