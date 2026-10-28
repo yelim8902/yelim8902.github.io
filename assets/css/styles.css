@@ -213,6 +213,16 @@ strong {
   font-weight: 700;
 }
 
+.title-avatar {
+  width: 1.15em;
+  height: 1.15em;
+  margin-left: 0.3em;
+  border-radius: 50%;
+  border: 1px solid var(--divider);
+  object-fit: cover;
+  vertical-align: -0.12em;
+}
+
 .desc {
   margin: 6px 0 0;
   color: var(--secondary);
@@ -573,7 +583,15 @@ strong {
 }
 
 .social a {
+  display: inline-flex;
+  align-items: center;
   color: var(--text-light);
+}
+
+.icon-svg {
+  width: 0.85em;
+  height: 0.85em;
+  fill: currentColor;
 }
 
 .social a:hover {
