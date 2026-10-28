@@ -717,13 +717,18 @@ strong {
 .toast {
   position: fixed;
   left: 50%;
-  bottom: 28px;
-  transform: translate(-50%, 8px);
-  padding: 8px 14px;
-  border-radius: 6px;
+  top: calc(var(--nav-height) + 16px);
+  transform: translate(-50%, -8px);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 999px;
   background: var(--heading);
   color: var(--bg);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
   font-size: 0.875rem;
+  white-space: nowrap;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.2s ease, transform 0.2s ease;
@@ -733,4 +738,8 @@ strong {
 .toast.show {
   opacity: 1;
   transform: translate(-50%, 0);
+}
+
+.toast .fa-circle-check {
+  color: #4ade80;
 }
