@@ -63,3 +63,33 @@
 
   sections.forEach((s) => observer.observe(s));
 })();
+
+// Email links: also copy the address, since mailto: does nothing without a mail app
+(function () {
+  const toast = document.createElement("div");
+  toast.className = "toast";
+  toast.setAttribute("role", "status");
+  document.body.appendChild(toast);
+  let timer;
+
+  function show(message) {
+    toast.textContent = message;
+    toast.classList.add("show");
+    clearTimeout(timer);
+    timer = setTimeout(() => toast.classList.remove("show"), 2200);
+  }
+
+  document.querySelectorAll('a[href^="mailto:"]').forEach((a) =>
+    a.addEventListener("click", () => {
+      const email = a.getAttribute("href").replace("mailto:", "");
+      if (navigator.clipboard) {
+        navigator.clipboard
+          .writeText(email)
+          .then(() => show("Copied " + email))
+          .catch(() => show(email));
+      } else {
+        show(email);
+      }
+    })
+  );
+})();
