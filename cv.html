@@ -378,20 +378,23 @@
       <div class="project-item">
         <div class="item-header">
           <div class="item-title">
-            TRACE-X – AI 기반 블록체인 자금세탁 모니터링 시스템
+            <a href="https://github.com/yelim8902/trace-x-platform">TRACE-X</a> – 블록체인 주소 자금세탁(AML) 리스크 탐지 플랫폼
           </div>
         </div>
         <div class="item-description">
-          블록체인 자금세탁 탐지를 위한 하이브리드 AML 시스템. 룰 기반 분석과
-          그래프 패턴 분석(PPR, Layering·Cycle·Fan-in/out)으로 도메인 지식을
-          특징화하고, Gradient Boosting으로 최종 스코어 산출. Accuracy 99.20%,
-          ROC-AUC 0.9992 달성. 실시간 분석(1~5초) 가능.
+          특금법·FATF 조항을 인용한 룰 기반 컴플라이언스 엔진(28개 룰)과 15개
+          피처의 HistGradientBoosting 모델을 하나의 점수로 섞지 않고 병렬로 반환하는
+          설명 가능한 구조로 설계. 제재·믹서 직접 노출 룰 발동 시 최우선 검토 신호를
+          띄우는 게이팅 적용, SHAP으로 ML 판단 근거 제시. Held-out 926개 주소 기준
+          Accuracy 97.0%, Recall 90.9%, ROC-AUC 99.3%, PR-AUC 97.3%.
         </div>
         <div class="tech-tags">
           <span class="tech-tag">Python</span>
-          <span class="tech-tag">Pandas</span>
+          <span class="tech-tag">Flask</span>
           <span class="tech-tag">Scikit-learn</span>
-          <span class="tech-tag">QuickNode API</span>
+          <span class="tech-tag">SHAP</span>
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">TypeScript</span>
           <span class="tech-tag">Etherscan API</span>
         </div>
       </div>
