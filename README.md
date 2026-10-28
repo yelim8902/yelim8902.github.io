@@ -53,7 +53,7 @@ portfolio-website/
 5. **Awards & Honors**
 6. **Education · Skills**
 7. **Contact** — 이메일 · 소셜 링크
-8. **CV** — [cv.html](cv.html) (인쇄용)
+8. **CV** — [cv/cv.pdf](cv/cv.pdf) (LaTeX 원본: `cv/cv.tex`, 빌드: `cd cv && xelatex cv.tex`)
 
 ## 로컬 실행
 

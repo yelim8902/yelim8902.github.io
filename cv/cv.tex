@@ -1,0 +1,137 @@
+% Yelim Lee — CV
+% Build: cd cv && xelatex cv.tex
+\documentclass[10pt]{article}
+
+\usepackage[a4paper, top=1.6cm, bottom=1.6cm, left=1.8cm, right=1.8cm]{geometry}
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\setmainfont{Charter}
+\newfontfamily\kofont{Apple SD Gothic Neo}[Scale=0.92, ItalicFont=Apple SD Gothic Neo, ItalicFeatures={FakeSlant=0.15}]
+\newcommand{\ko}[1]{{\kofont #1}}
+
+\definecolor{accent}{HTML}{2E57B8}
+\definecolor{muted}{HTML}{596273}
+\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\linespread{1.08}
+
+% --- Layout helpers ---------------------------------------------------------
+
+\newcommand{\cvsection}[1]{%
+  \vspace{9pt}%
+  {\color{accent}\large\bfseries #1}\par
+  \vspace{2pt}{\color{accent!35}\hrule height 0.6pt}\vspace{5pt}}
+
+% \entry{title}{date}{subtitle}
+\newcommand{\entry}[3]{%
+  \textbf{#1}\hfill{\color{muted}#2}\par
+  \ifx\relax#3\relax\else{\color{muted}\itshape #3}\par\fi}
+
+\newenvironment{points}{%
+  \begin{list}{\textbullet}{%
+    \setlength{\leftmargin}{1.1em}\setlength{\labelwidth}{0.7em}%
+    \setlength{\labelsep}{0.4em}\setlength{\itemsep}{1pt}%
+    \setlength{\parsep}{0pt}\setlength{\topsep}{2pt}}}%
+  {\end{list}\vspace{5pt}}
+
+% \award{year}{text}
+\newcommand{\award}[2]{\makebox[3.2em][l]{\color{muted}#1}#2\par\vspace{1.5pt}}
+
+\begin{document}
+
+% --- Header -----------------------------------------------------------------
+
+{\LARGE\bfseries Yelim Lee}\hspace{0.5em}{\large\ko{이예림}}\par
+\vspace{4pt}
+{\color{muted}
+\href{mailto:yelim2849@gmail.com}{yelim2849@gmail.com}
+\enspace·\enspace \href{https://yelim8902.github.io/portfolio-website/}{yelim8902.github.io/portfolio-website}\\
+\href{https://github.com/yelim8902}{github.com/yelim8902}
+\enspace·\enspace \href{https://www.linkedin.com/in/yelim-lee-80899a305/}{linkedin.com/in/yelim-lee}
+}\par
+
+% --- Interests --------------------------------------------------------------
+
+\cvsection{Research Interests}
+AI agents, AI systems, and blockchain security, with a focus on building technology that people can trust.
+
+% --- Education --------------------------------------------------------------
+
+\cvsection{Education}
+\entry{Ajou University}{Mar 2023 -- Present}{B.S. in Software and Computer Engineering}
+
+% --- Experience -------------------------------------------------------------
+
+\cvsection{Experience}
+
+\entry{AI Research Intern, \href{https://www.ineeji.com/}{INEEJI}}{Sep 2026 -- Present}{Research Team 2 · AlphaWeather, an AI assistant for weather forecasters}
+\begin{points}
+  \item Improved weather-chart reading with color-separation and brightness preprocessing; raised observation-to-image location matching from 17\% to 81.6\%.
+  \item Trained a CNN for temperature-value extraction (95.2\% accuracy) and analyzed its bottlenecks; built and validated VLM training data for chart reading.
+  \item Fine-tuned open-source Gemma in an air-gapped environment and experimented with tool calling, toward a single model that works across chart types (in progress).
+  \item Designed and built a rubric-based VQA dataset to evaluate and improve generation accuracy.
+\end{points}
+
+\entry{Reporter, Financial Friends}{Apr 2026 -- Present}{\href{https://www.youtube.com/@FSCKorea}{Financial Services Commission} (\ko{금융위원회})}
+\begin{points}
+  \item Producing 7 policy explainer videos for the FSC YouTube channel (ongoing), covering security tokens (STO), illegal crypto-asset operators, and single-stock leveraged products.
+\end{points}
+
+\entry{Member, Blockchain at Yonsei (BAY, 16th)}{Jul 2025 -- Jun 2026}{Development \& Research Team}
+\begin{points}
+  \item Led crypto-monitoring sessions and studied DeFi/AML trends; developed smart contracts and joined hackathons.
+\end{points}
+
+\entry{Founder, Paletting}{Aug 2023 -- Dec 2023}{Values-based matching platform}
+\begin{points}
+  \item Designed a survey-driven matching algorithm and led a team of 4 across planning, design, and operations.
+  \item Acquired 500+ users through social media marketing.
+\end{points}
+
+% --- Projects ---------------------------------------------------------------
+
+\cvsection{Selected Projects}
+
+\entry{\ko{집지기} (Jipjigi): An LLM Agent for Young Adults' Housing Decisions}{2026}{8th KB Future Finance AI Challenge, Excellence Award (Team \ko{똘똘한 최})}
+\begin{points}
+  \item Built a Text-to-SQL RDB-RAG pipeline for listing search, improving retrieval accuracy from 70\% to 96\%.
+  \item Designed a prior-lien deposit estimation model for jeonse-fraud risk, informed by interviews with 30 brokers and young tenants.\enspace
+        \href{https://youtu.be/028Z1jpgcko}{[video]}\enspace\href{https://www.leadeconomy.co.kr/news/articleView.html?idxno=9543}{[news]}
+\end{points}
+
+\entry{TRACE-X: Explainable AML Risk Scoring for Blockchain Addresses}{2025}{AJOU SOFTCON 2025-2 Research Track, Excellence Award (Team \ko{말해뭐해})}
+\begin{points}
+  \item Designed a 28-rule compliance engine citing Korean AML law and FATF that explains each flag through triggered rules, reported alongside a 15-feature gradient-boosting score.
+  \item Added compliance gating that raises a top-priority review signal on direct sanctions or mixer exposure.
+  \item Held-out set (926 addresses): Accuracy 97.0\%, Recall 90.9\%, ROC-AUC 99.3\%, PR-AUC 97.3\%.\enspace
+        \href{https://github.com/yelim8902/trace-x-platform}{[code]}\enspace\href{https://youtu.be/dbo9gwlLPCw}{[video]}
+\end{points}
+
+\entry{XAI-AML: Explainable Suspicious Transaction Detection}{2025}{AJOU SOFTCON 2025 SW Fundamentals Track, First Prize}
+\begin{points}
+  \item Built SHAP/LIME explanations over a LightGBM detector and automated template-based STR report generation.\enspace
+        \href{https://github.com/yelim8902/XAI_AML}{[code]}
+\end{points}
+
+% --- Awards -----------------------------------------------------------------
+
+\cvsection{Honors \& Awards}
+\award{2026}{Excellence Award, 8th KB Future Finance AI Challenge \hfill {\color{muted}KB Kookmin Bank}}
+\award{2025}{Excellence Award, AJOU SOFTCON 2025-2 (Research Track) \hfill {\color{muted}Ajou University}}
+\award{2025}{Award, Paran Semester Program (TRACE-X) \hfill {\color{muted}Ajou University}}
+\award{2025}{First Prize, AJOU SOFTCON 2025 (SW Fundamentals) \hfill {\color{muted}Ajou University}}
+\award{2025}{Excellence Award, 5th SW Convergence Startup Camp (Trusticket) \hfill {\color{muted}Kyung Hee University}}
+\award{2025}{Selected, Student Startup 300+ Program (Trusticket) \hfill {\color{muted}Ministry of Education \& MSIT}}
+\award{2024}{4th Place, Future Library Policy Idea Hackathon \hfill {\color{muted}NIA}}
+
+% --- Skills -----------------------------------------------------------------
+
+\cvsection{Skills}
+\makebox[6.5em][l]{\textbf{Proficient}}Python, C, C++, Java, Git\par\vspace{1.5pt}
+\makebox[6.5em][l]{\textbf{Experienced}}PyTorch, TensorFlow, Docker, JavaScript, Solidity\par
+
+\end{document}

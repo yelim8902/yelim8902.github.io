@@ -47,3 +47,8 @@ pids
 # Temporary folders
 tmp/
 temp/
+
+# LaTeX build files
+cv/*.aux
+cv/*.log
+cv/*.out
