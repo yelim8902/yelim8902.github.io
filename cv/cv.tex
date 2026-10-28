@@ -1,35 +1,36 @@
 % Yelim Lee — CV
 % Build: cd cv && xelatex cv.tex
-\documentclass[10pt]{article}
+\documentclass[11pt]{article}
 
 \usepackage[a4paper, top=1.6cm, bottom=1.6cm, left=1.8cm, right=1.8cm]{geometry}
 \usepackage{fontspec}
 \usepackage{xcolor}
 \usepackage{hyperref}
 
-\setmainfont{Charter}
-\newfontfamily\kofont{Apple SD Gothic Neo}[Scale=0.92, ItalicFont=Apple SD Gothic Neo, ItalicFeatures={FakeSlant=0.15}]
+\setmainfont{Times New Roman}
+% Serif Korean to match the Latin text; AppleMyungjo ships with one weight
+\newfontfamily\kofont{AppleMyungjo}[Scale=0.95, BoldFont=AppleMyungjo, BoldFeatures={FakeBold=2}, ItalicFont=AppleMyungjo, ItalicFeatures={FakeSlant=0.15}]
 \newcommand{\ko}[1]{{\kofont #1}}
 
-\definecolor{accent}{HTML}{2E57B8}
-\definecolor{muted}{HTML}{596273}
-\hypersetup{colorlinks=true, urlcolor=accent, linkcolor=accent}
+\definecolor{link}{HTML}{0B1F8C}
+\hypersetup{colorlinks=true, urlcolor=link, linkcolor=link}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\linespread{1.08}
+\linespread{1.06}
+\emergencystretch=1.5em
 
 % --- Layout helpers ---------------------------------------------------------
 
 \newcommand{\cvsection}[1]{%
-  \vspace{9pt}%
-  {\color{accent}\large\bfseries #1}\par
-  \vspace{2pt}{\color{accent!35}\hrule height 0.6pt}\vspace{5pt}}
+  \vspace{10pt}%
+  {\large\bfseries\MakeUppercase{#1}}\par
+  \vspace{2pt}\hrule height 0.5pt\vspace{5pt}}
 
 % \entry{title}{date}{subtitle}
 \newcommand{\entry}[3]{%
-  \textbf{#1}\hfill{\color{muted}#2}\par
-  \ifx\relax#3\relax\else{\color{muted}\itshape #3}\par\fi}
+  \textbf{#1}\hfill #2\par
+  \ifx\relax#3\relax\else{\itshape #3}\par\fi}
 
 \newenvironment{points}{%
   \begin{list}{\textbullet}{%
@@ -39,26 +40,30 @@
   {\end{list}\vspace{5pt}}
 
 % \award{year}{text}
-\newcommand{\award}[2]{\makebox[3.2em][l]{\color{muted}#1}#2\par\vspace{1.5pt}}
+\newcommand{\award}[2]{\makebox[3.2em][l]{#1}#2\par\vspace{1.5pt}}
+
+\newcommand{\sep}{\enspace$\diamond$\enspace}
 
 \begin{document}
 
 % --- Header -----------------------------------------------------------------
 
-{\LARGE\bfseries Yelim Lee}\hspace{0.5em}{\large\ko{이예림}}\par
-\vspace{4pt}
-{\color{muted}
-\href{mailto:yelim2849@gmail.com}{yelim2849@gmail.com}
-\enspace·\enspace \href{https://yelim8902.github.io/portfolio-website/}{yelim8902.github.io/portfolio-website}\\
-\href{https://github.com/yelim8902}{github.com/yelim8902}
-\enspace·\enspace \href{https://www.linkedin.com/in/yelim-lee-80899a305/}{linkedin.com/in/yelim-lee}
-}\par
+\begin{center}
+  {\fontsize{24}{28}\selectfont\bfseries YELIM LEE}\par
+  \vspace{6pt}
+  {\small
+  \href{mailto:yelim2849@gmail.com}{yelim2849@gmail.com}
+  \sep\href{https://yelim8902.github.io/portfolio-website/}{yelim8902.github.io/portfolio-website}
+  \sep\href{https://github.com/yelim8902}{github.com/yelim8902}
+  \sep\href{https://www.linkedin.com/in/yelim-lee-80899a305/}{linkedin.com/in/yelim-lee}}
+\end{center}
+\vspace{-4pt}
 
 % --- About ------------------------------------------------------------------
 
 \cvsection{About}
 I am an undergraduate student in Software and Computer Engineering at Ajou University, currently working as an AI Research Intern at INEEJI on AI agents that read weather charts for forecasters.
-I am interested in \textbf{AI agents}, \textbf{AI systems}, and \textbf{blockchain security}, and more broadly in building technology that people can trust.
+I am interested in \emph{AI agents}, \emph{AI systems}, and \emph{blockchain security}, and more broadly in building technology that people can trust.
 I also enjoy sharing what I learn and talking with others about it.
 
 % --- Education --------------------------------------------------------------
@@ -85,7 +90,7 @@ I also enjoy sharing what I learn and talking with others about it.
 
 \entry{Member, Blockchain at Yonsei (BAY, 16th)}{Jul 2025 -- Jun 2026}{Development \& Research Team}
 \begin{points}
-  \item Led crypto-monitoring sessions and studied DeFi/AML trends; developed smart contracts and joined hackathons.
+  \item Led crypto-monitoring sessions and studied DeFi and AML trends; developed smart contracts and joined hackathons.
 \end{points}
 
 \entry{Founder, Paletting}{Aug 2023 -- Dec 2023}{Values-based matching platform}
@@ -109,8 +114,8 @@ I also enjoy sharing what I learn and talking with others about it.
 \begin{points}
   \item Designed a 28-rule compliance engine citing Korean AML law and FATF that explains each flag through triggered rules, reported alongside a 15-feature gradient-boosting score.
   \item Added compliance gating that raises a top-priority review signal on direct sanctions or mixer exposure.
-  \item Held-out set (926 addresses): Accuracy 97.0\%, Recall 90.9\%, ROC-AUC 99.3\%, PR-AUC 97.3\%.\enspace
         \href{https://github.com/yelim8902/trace-x-platform}{[code]}\enspace\href{https://youtu.be/dbo9gwlLPCw}{[video]}
+  \item Held-out set (926 addresses): Accuracy 97.0\%, Recall 90.9\%, ROC-AUC 99.3\%, PR-AUC 97.3\%.
 \end{points}
 
 \entry{XAI-AML: Explainable Suspicious Transaction Detection}{2025}{AJOU SOFTCON 2025 SW Fundamentals Track, First Prize}
@@ -122,13 +127,13 @@ I also enjoy sharing what I learn and talking with others about it.
 % --- Awards -----------------------------------------------------------------
 
 \cvsection{Honors \& Awards}
-\award{2026}{Excellence Award, 8th KB Future Finance AI Challenge \hfill {\color{muted}KB Kookmin Bank}}
-\award{2025}{Excellence Award, AJOU SOFTCON 2025-2 (Research Track) \hfill {\color{muted}Ajou University}}
-\award{2025}{Award, Paran Semester Program (TRACE-X) \hfill {\color{muted}Ajou University}}
-\award{2025}{First Prize, AJOU SOFTCON 2025 (SW Fundamentals) \hfill {\color{muted}Ajou University}}
-\award{2025}{Excellence Award, 5th SW Convergence Startup Camp (Trusticket) \hfill {\color{muted}Kyung Hee University}}
-\award{2025}{Selected, Student Startup 300+ Program (Trusticket) \hfill {\color{muted}Ministry of Education \& MSIT}}
-\award{2024}{4th Place, Future Library Policy Idea Hackathon \hfill {\color{muted}NIA}}
+\award{2026}{Excellence Award, 8th KB Future Finance AI Challenge \hfill {\itshape KB Kookmin Bank}}
+\award{2025}{Excellence Award, AJOU SOFTCON 2025-2 (Research Track) \hfill {\itshape Ajou University}}
+\award{2025}{Award, Paran Semester Program (TRACE-X) \hfill {\itshape Ajou University}}
+\award{2025}{First Prize, AJOU SOFTCON 2025 (SW Fundamentals) \hfill {\itshape Ajou University}}
+\award{2025}{Excellence Award, 5th SW Convergence Startup Camp (Trusticket) \hfill {\itshape Kyung Hee University}}
+\award{2025}{Selected, Student Startup 300+ Program (Trusticket) \hfill {\itshape Ministry of Education \& MSIT}}
+\award{2024}{4th Place, Future Library Policy Idea Hackathon \hfill {\itshape NIA}}
 
 % --- Skills -----------------------------------------------------------------
 
