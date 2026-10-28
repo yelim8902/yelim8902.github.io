@@ -3,28 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>yelim's portfolio</title>
-    <link
-      rel="icon"
-      href="assets/images/favicon.jpg?v=2"
-      type="image/jpeg"
-      sizes="any"
+    <title>Yelim Lee</title>
+    <meta
+      name="description"
+      content="Yelim Lee (이예림) — Undergraduate in Software and Computer Engineering at Ajou University. Research interests: blockchain AML, explainable AI, AI agents for finance."
     />
-    <link
-      rel="shortcut icon"
-      href="assets/images/favicon.jpg?v=2"
-      type="image/jpeg"
-    />
+    <link rel="icon" href="assets/images/favicon.jpg?v=2" type="image/jpeg" />
     <link rel="apple-touch-icon" href="assets/images/favicon.jpg?v=2" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css"
+    <meta property="og:title" content="Yelim Lee" />
+    <meta
+      property="og:description"
+      content="Software and Computer Engineering @ Ajou University · Blockchain AML · Explainable AI"
     />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <meta property="og:title" content="yelim's portfolio" />
-    <meta property="og:description" content="여기를 눌러 링크를 확인하세요." />
     <meta
       property="og:url"
       content="https://yelim8902.github.io/portfolio-website/"
@@ -33,925 +23,457 @@
       property="og:image"
       content="https://yelim8902.github.io/portfolio-website/assets/images/favicon.jpg?v=2"
     />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:image"
-      content="https://yelim8902.github.io/portfolio-website/assets/images/favicon.jpg?v=2"
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css"
     />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <!-- EmailJS CDN -->
-    <script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
-    ></script>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <script>
+      // Apply saved theme before paint to avoid a flash
+      try {
+        var t = localStorage.getItem("theme");
+        if (t) document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    </script>
   </head>
   <body>
-    <a class="skip-link" href="#home">Skip to content</a>
-    <!-- Scroll Progress Bar -->
-    <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+    <a class="skip-link" href="#about">Skip to content</a>
 
     <!-- Navigation -->
-    <nav class="navbar">
+    <header class="navbar">
       <div class="nav-container">
-        <div class="nav-logo">
-          <a href="#home">이예림</a>
+        <a href="#about" class="nav-brand"><strong>Yelim</strong> Lee</a>
+        <nav class="nav-menu" id="navMenu">
+          <a href="#about" class="nav-link">about</a>
+          <a href="#experience" class="nav-link">experience</a>
+          <a href="#projects" class="nav-link">projects</a>
+          <a href="#awards" class="nav-link">awards</a>
+          <a href="cv.html" class="nav-link">cv</a>
+        </nav>
+        <div class="nav-actions">
+          <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon" id="themeIcon"></i>
+          </button>
+          <button class="icon-btn nav-toggle" id="navToggle" aria-label="Open menu">
+            <i class="fas fa-bars"></i>
+          </button>
         </div>
-        <ul class="nav-menu">
-          <li class="nav-item">
-            <a href="#home" class="nav-link">홈</a>
+      </div>
+    </header>
+
+    <main class="page">
+      <!-- About -->
+      <section id="about" class="section about">
+        <header class="post-header">
+          <h1 class="post-title"><strong>Yelim</strong> Lee</h1>
+          <p class="desc">이예림 · Undergraduate, Ajou University</p>
+        </header>
+
+        <div class="about-body">
+          <figure class="profile">
+            <img
+              src="assets/images/이예림.jpg"
+              alt="Yelim Lee"
+              class="profile-img"
+              decoding="async"
+            />
+            <figcaption>
+              Software and Computer Engineering<br />Ajou University, Suwon
+            </figcaption>
+          </figure>
+
+          <div class="about-text">
+            <p>
+              I am an undergraduate student majoring in
+              <strong>Software and Computer Engineering</strong>
+              at <a href="https://www.ajou.ac.kr/" target="_blank" rel="noopener">Ajou University</a>.
+              I am currently an AI Research Intern at
+              <a href="https://www.ineeji.com/" target="_blank" rel="noopener">INEEJI</a>,
+              and an undergraduate researcher at Ilab advised by Prof. Kihyung Kim.
+            </p>
+            <p>
+              My research interests lie at the intersection of
+              <strong>AI and finance</strong>. Currently, I focus on
+              <strong>blockchain anti-money laundering (AML)</strong>,
+              <strong>explainable AI</strong> for financial anomaly detection,
+              and <strong>LLM agents</strong> for financial decision-making.
+            </p>
+            <p class="about-ko">
+              소프트웨어학과에서 공부하며, 데이터 · 블록체인 · AI로
+              금융 문제를 연구합니다. 배운 것을 제 언어로 풀어내는 것을 좋아해
+              <a href="https://zingangyyy.tistory.com/" target="_blank" rel="noopener">기술 블로그</a>를
+              운영하고 있습니다.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- News -->
+      <section id="news" class="section">
+        <h2 class="section-title">news</h2>
+        <table class="news-table">
+          <tbody>
+            <tr>
+              <th scope="row">Sep 2026</th>
+              <td>
+                Joined <strong>INEEJI</strong> as an AI Research Intern, working on
+                weather-forecasting AI agents.
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Sep 2026</th>
+              <td>
+                Our team received the <strong>Excellence Award</strong> at the
+                8th KB Future Finance AI Challenge 🎉
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Mar 2026</th>
+              <td>
+                Started as an undergraduate researcher at <strong>Ilab</strong>,
+                Ajou University (blockchain anomaly detection).
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Dec 2025</th>
+              <td>
+                <strong>TRACE-X</strong> received the Excellence Award in the
+                research track at AJOU SOFTCON 2025-2.
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">Jul 2025</th>
+              <td>
+                Selected for the <strong>Student Startup 300+</strong> program
+                (Ministry of Education &amp; MSIT) with Trusticket.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="section">
+        <h2 class="section-title">experience</h2>
+        <ul class="cv-list">
+          <li class="cv-item has-logo">
+            <img class="cv-logo cv-logo-photo" src="assets/images/logo-ineeji.jpeg" alt="INEEJI logo" loading="lazy" />
+            <div class="cv-main">
+              <div class="cv-head">
+                <span class="cv-title">AI Research Intern, <a href="https://www.ineeji.com/" target="_blank" rel="noopener">INEEJI</a></span>
+                <span class="cv-date">Sep 2026 – Present</span>
+              </div>
+              <div class="cv-sub">AlphaWeather — AI assistant for weather forecasters</div>
+              <ul class="cv-points">
+                <li>Improved weather-chart reading via color separation &amp; brightness preprocessing (location matching 17% → 81.6%)</li>
+                <li>Fine-tuned Gemma with tool calling in an air-gapped environment toward a chart-type-agnostic model</li>
+                <li>Built a rubric-based VQA dataset to improve generation accuracy</li>
+              </ul>
+            </div>
           </li>
-          <li class="nav-item">
-            <a href="#about" class="nav-link">소개</a>
+          <li class="cv-item has-logo">
+            <img class="cv-logo" src="assets/images/logo-ajou.png" alt="Ajou University logo" loading="lazy" />
+            <div class="cv-main">
+              <div class="cv-head">
+                <span class="cv-title">Undergraduate Researcher, Ilab</span>
+                <span class="cv-date">Mar 2026 – Present</span>
+              </div>
+              <div class="cv-sub">Ajou University · Advisor: Prof. Kihyung Kim</div>
+              <ul class="cv-points">
+                <li>Anomalous transaction detection on blockchain networks</li>
+              </ul>
+            </div>
           </li>
-          <li class="nav-item">
-            <a href="#projects" class="nav-link">프로젝트</a>
+          <li class="cv-item has-logo">
+            <img class="cv-logo cv-logo-tight" src="assets/images/logo-fsc.png" alt="Financial Services Commission logo" loading="lazy" />
+            <div class="cv-main">
+              <div class="cv-head">
+                <span class="cv-title">Reporter | Financial Friends</span>
+                <span class="cv-date">Mar 2026 – Present</span>
+              </div>
+              <div class="cv-sub"><a href="https://www.youtube.com/@FSCKorea" target="_blank" rel="noopener">Financial Services Commission</a> (금융위원회)</div>
+              <ul class="cv-points">
+                <li>Producing 7 policy explainer videos for the FSC YouTube channel (ongoing)</li>
+                <li>Topics: security tokens, illegal crypto-asset operators, single-stock leveraged products</li>
+              </ul>
+            </div>
           </li>
-          <li class="nav-item">
-            <a href="#skills" class="nav-link">기술</a>
+          <li class="cv-item has-logo">
+            <img class="cv-logo cv-logo-photo" src="assets/images/logo-bay.jpeg" alt="Blockchain at Yonsei logo" loading="lazy" />
+            <div class="cv-main">
+              <div class="cv-head">
+                <span class="cv-title">Member, Blockchain at Yonsei (BAY, 16th)</span>
+                <span class="cv-date">Jul 2025 – Jun 2026</span>
+              </div>
+              <div class="cv-sub">Development &amp; Research Team</div>
+              <ul class="cv-points">
+                <li>Led crypto-monitoring sessions; studied DeFi/AML trends</li>
+                <li>Articles on <a href="https://medium.com/yonseiblockchainlab" target="_blank" rel="noopener">Yonsei Blockchain Lab</a> (Medium):
+                  <ul class="cv-subpoints">
+                    <li><a href="https://medium.com/yonseiblockchainlab/cbdc%EB%9D%BC%EB%8A%94-%EC%99%B8%EC%83%9D%EB%B3%80%EC%88%98-%EB%AF%BC%EA%B0%84-%EC%8A%A4%ED%85%8C%EC%9D%B4%EB%B8%94%EC%BD%94%EC%9D%B8%EC%9D%98-%EC%98%81%EC%97%AD%EC%9D%80-%EC%96%B4%EB%94%94%EA%B9%8C%EC%A7%80%EC%9D%B8%EA%B0%80-1%ED%8E%B8-42525707be5b" target="_blank" rel="noopener">CBDC라는 외생변수: 민간 스테이블코인의 영역은 어디까지인가 (1편)</a></li>
+                    <li><a href="https://medium.com/yonseiblockchainlab/cbdc%EB%9D%BC%EB%8A%94-%EC%99%B8%EC%83%9D%EB%B3%80%EC%88%98-%EB%AF%BC%EA%B0%84-%EC%8A%A4%ED%85%8C%EC%9D%B4%EB%B8%94%EC%BD%94%EC%9D%B8%EC%9D%98-%EC%98%81%EC%97%AD%EC%9D%80-%EC%96%B4%EB%94%94%EA%B9%8C%EC%A7%80%EC%9D%B8%EA%B0%80-2%ED%8E%B8-1c5f7c809e70" target="_blank" rel="noopener">CBDC라는 외생변수: 민간 스테이블코인의 영역은 어디까지인가 (2편)</a></li>
+                    <li><a href="https://medium.com/yonseiblockchainlab/%ED%95%B4%ED%82%B9%EC%9D%80-%EC%97%86%EC%97%88%EB%8B%A4-2026%EB%85%84-%ED%95%9C%EA%B5%AD-%EA%B0%80%EC%83%81%EC%9E%90%EC%82%B0-3%EB%8C%80-%EC%82%AC%EA%B3%A0%EC%9D%98-%EC%A7%84%EC%A7%9C-%EC%9B%90%EC%9D%B8-60bdd2b78478" target="_blank" rel="noopener">해킹은 없었다: 2026년 한국 가상자산 3대 사고의 진짜 원인</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </li>
-          <li class="nav-item">
-            <a href="#awards" class="nav-link">수상경력</a>
-          </li>
-          <li class="nav-item">
-            <a href="#activities" class="nav-link">활동</a>
-          </li>
-          <li class="nav-item">
-            <a href="#contact" class="nav-link">연락처</a>
+          <li class="cv-item has-logo">
+            <span class="cv-logo cv-logo-mono" aria-hidden="true">P</span>
+            <div class="cv-main">
+              <div class="cv-head">
+                <span class="cv-title">Founder, Paletting</span>
+                <span class="cv-date">Aug 2023 – Dec 2023</span>
+              </div>
+              <div class="cv-sub">Values-based matching platform</div>
+              <ul class="cv-points">
+                <li>Designed survey-driven matching algorithm; led a team of 4</li>
+                <li>Acquired 150+ users via social media marketing</li>
+              </ul>
+            </div>
           </li>
         </ul>
-        <button class="theme-toggle" id="themeToggle" aria-label="다크모드 전환">
-          <i class="fas fa-moon" id="themeIcon"></i>
-        </button>
-        <div class="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </div>
-    </nav>
+      </section>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div class="hero-container">
-        <div class="hero-content">
-          <h1 class="hero-title" id="heroTitle">안녕하세요, <span class="hero-name">이예림</span>입니다.</h1>
-          <p class="hero-desc">소프트웨어 × 금융공학을 전공하며<br>데이터 · 블록체인 · AI로 금융을 탐구합니다.</p>
-          <div class="hero-keywords">
-            <span class="keyword-tag">
-              <i class="fas fa-link"></i>
-              <span>블록체인</span>
-            </span>
-            <span class="keyword-tag">
-              <i class="fas fa-brain"></i>
-              <span>AI</span>
-            </span>
-            <span class="keyword-tag">
-              <i class="fas fa-shield-alt"></i>
-              <span>보안</span>
-            </span>
-            <span class="keyword-tag">
-              <i class="fas fa-wallet"></i>
-              <span>금융</span>
-            </span>
-          </div>
-          <div class="hero-buttons">
-            <a href="#projects" class="btn btn-primary">프로젝트 보기</a>
-            <a href="#contact" class="btn btn-secondary">연락하기</a>
-          </div>
-        </div>
-        <div class="hero-image">
-          <div class="profile-card-stack">
-            <div class="profile-card-layer layer-3"></div>
-            <div class="profile-card-layer layer-2"></div>
-            <div class="profile-card-layer layer-1" id="profileCard">
+      <!-- Selected Projects -->
+      <section id="projects" class="section">
+        <h2 class="section-title">selected projects</h2>
+        <ol class="pub-list">
+          <li class="pub">
+            <div class="pub-preview">
+              <span class="pub-abbr">SOFTCON</span>
               <img
-                src="assets/images/이예림.jpg"
-                alt="프로필 사진"
+                src="assets/images/이상거래탐지데모사진.jpg"
+                alt="TRACE-X preview"
                 loading="lazy"
-                decoding="async"
-                class="hero-profile-image"
-                id="profileImage"
               />
             </div>
-            <div class="hero-stat-chip chip-top">
-              <span class="chip-icon">🏆</span>
-              <span class="chip-text">수상 5회</span>
-            </div>
-            <div class="hero-stat-chip chip-middle">
-              <span class="chip-icon">🚀</span>
-              <span class="chip-text">창업 경험</span>
-            </div>
-            <div class="hero-stat-chip chip-bottom">
-              <span class="chip-icon">📝</span>
-              <span class="chip-text">블로그/유튜브 10만+</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="scroll-indicator">
-        <div class="scroll-arrow"></div>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">About</h2>
-        </div>
-        <div class="intro-text about-intro-full">
-          <p>
-            소프트웨어와 금융공학을 함께 전공중인 학생입니다. 배운 것을
-            저만의 언어로 블로그에 풀어내는 것을 좋아합니다. 블록체인과
-            데이터 분야에 관심이 많습니다.
-          </p>
-        </div>
-
-        <div class="about-grid">
-          <!-- 왼쪽 컬럼 -->
-          <div class="about-left">
-
-            <div class="simple-section">
-              <h4 class="simple-title">Education</h4>
-              <div class="simple-item">
-                <div class="simple-period">2023 – 현재</div>
-                <div class="simple-content">
-                  <h5>아주대학교</h5>
-                  <p>소프트웨어학과 재학, 금융공학과 복수전공</p>
-                  <ul class="simple-details">
-                    <li>C, Java, 자료구조, 알고리즘 등 기초 CS 지식 학습</li>
-                    <li>Python, R, 데이터 프로그래밍 학습</li>
-                  </ul>
-                </div>
+            <div class="pub-body">
+              <div class="pub-title">
+                TRACE-X: A Hybrid Rule- and Graph-based AML Monitoring System for Blockchain Transactions
               </div>
-            </div>
-
-            <div class="simple-section">
-              <h4 class="simple-title">Blog</h4>
-              <div class="blog-links">
-                <a href="https://zingangyyy.tistory.com/" class="simple-blog-link" target="_blank">
-                  <span class="blog-icon"><i class="fas fa-pen-to-square"></i></span>
-                  <span class="blog-info">
-                    <span class="blog-name">진강이의 성장일지</span>
-                    <span class="blog-desc-small">기술 · 경제</span>
-                  </span>
-                  <span class="blog-platform">티스토리 →</span>
-                </a>
-                <a href="https://blog.naver.com/lyl2849" class="simple-blog-link" target="_blank">
-                  <span class="blog-icon"><i class="fas fa-book-open"></i></span>
-                  <span class="blog-info">
-                    <span class="blog-name">진강이의 서랍</span>
-                    <span class="blog-desc-small">일상 · 생각</span>
-                  </span>
-                  <span class="blog-platform">네이버 →</span>
-                </a>
+              <div class="pub-authors">
+                <em>Team 말해뭐해</em> · Rule-based scoring + graph pattern
+                analysis (PPR, layering, cycle, fan-in/out) + gradient boosting
               </div>
-            </div>
-          </div>
-
-          <!-- 오른쪽 컬럼 -->
-          <div class="about-right">
-            <div class="about-stats">
-              <div class="about-stat">
-                <span class="about-stat-number">6</span>
-                <span class="about-stat-label">수상</span>
+              <div class="pub-venue">
+                <em>AJOU SOFTCON 2025-2, Research Track</em>,
+                <span class="pub-highlight">Excellence Award</span>
               </div>
-              <div class="about-stat">
-                <span class="about-stat-number">100K+</span>
-                <span class="about-stat-label">블로그 조회수</span>
-              </div>
-              <div class="about-stat">
-                <span class="about-stat-number">1</span>
-                <span class="about-stat-label">창업 경험</span>
-              </div>
-              <div class="about-stat">
-                <span class="about-stat-number">10+</span>
-                <span class="about-stat-label">프로젝트</span>
-              </div>
-            </div>
-
-            <div class="simple-section">
-              <h4 class="simple-title">Timeline</h4>
-              <div class="about-timeline">
-                <div class="timeline-item">
-                  <div class="timeline-dot active"></div>
-                  <div class="timeline-content">
-                    <span class="timeline-date">2026.09 ~</span>
-                    <p>㈜인이지 AI Research Intern · KB Future Finance AI Challenge 우수상</p>
-                  </div>
-                </div>
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-content">
-                    <span class="timeline-date">2026.03 ~</span>
-                    <p>아주대학교 Ilab 학부연구생 · 금융프랜즈 · AWS Cloud Camp 수료</p>
-                  </div>
-                </div>
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-content">
-                    <span class="timeline-date">2025</span>
-                    <p>블록체인 AML 시스템 개발 · 학생창업유망팀 300+ 선정 · 수상 5회</p>
-                  </div>
-                </div>
-                <div class="timeline-item">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-content">
-                    <span class="timeline-date">2023.08</span>
-                    <p>Paletting 창업 · 아주대학교 소프트웨어 × 금융공학 입학</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Projects</h2>
-        </div>
-        <div class="projects-grid">
-          <div class="project-card">
-            <div class="project-image tracex-bg">
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a
-                    href="https://softcon.ajou.ac.kr/works/works.asp?uid=2250"
-                    class="project-link"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="SOFTCON project page"
-                    ><i class="fas fa-external-link-alt"></i
-                  ></a>
-                  <a
-                    href="https://youtu.be/dbo9gwlLPCw?si=CpjZ08XL4CHavET_"
-                    class="project-link"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="YouTube video"
-                    ><i class="fab fa-youtube"></i
-                  ></a>
-                  <a
-                    href="https://github.com/paran-needless-to-say/MPOcryptoML"
-                    class="project-link"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="GitHub repository"
-                    ><i class="fab fa-github"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3>TRACE-X – AI 기반 블록체인 자금세탁 모니터링 시스템</h3>
-              <p>
-                블록체인 자금세탁 탐지를 위한 하이브리드 AML 시스템. 룰 기반
-                분석과 그래프 패턴 분석(PPR, Layering·Cycle·Fan-in/out)으로
-                도메인 지식을 특징화하고, Gradient Boosting으로 최종 스코어
-                산출. Accuracy 99.20%, ROC-AUC 0.9992 달성. 실시간 분석(1~5초)
-                가능.
+              <p class="pub-note">
+                Accuracy 99.20% · ROC-AUC 0.9992 · real-time analysis in 1–5 s
               </p>
-              <div class="project-tech">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Pandas</span>
-                <span class="tech-tag">Scikit-learn</span>
-                <span class="tech-tag">QuickNode API</span>
-                <span class="tech-tag">Etherscan API</span>
+              <div class="pub-links">
+                <a class="btn-link" href="https://softcon.ajou.ac.kr/works/works.asp?uid=2250" target="_blank" rel="noopener">Page</a>
+                <a class="btn-link" href="assets/docs/softcon22.pdf" target="_blank" rel="noopener">PDF</a>
+                <a class="btn-link" href="https://github.com/paran-needless-to-say/MPOcryptoML" target="_blank" rel="noopener">Code</a>
+                <a class="btn-link" href="https://youtu.be/dbo9gwlLPCw?si=CpjZ08XL4CHavET_" target="_blank" rel="noopener">Video</a>
               </div>
             </div>
-          </div>
-          <div class="project-card">
-            <div class="project-image xmas-bg">
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a
-                    href="https://github.com/yelim8902/X-mas"
-                    class="project-link"
-                    target="_blank"
-                    rel="noopener"
-                    aria-label="GitHub repository"
-                    ><i class="fab fa-github"></i
-                  ></a>
-                </div>
-              </div>
+          </li>
+
+          <li class="pub">
+            <div class="pub-preview">
+              <span class="pub-abbr">KB AI</span>
+              <img
+                src="assets/images/KB국민은행_우수상.jpg"
+                alt="집지기 preview"
+                loading="lazy"
+              />
             </div>
-            <div class="project-content">
-              <h3>크리스마스 롤링 페이퍼 웹 사이트</h3>
-              <p>
-                Next.js 14 (App Router) + Tailwind CSS + Framer Motion 기반으로
-                클레이모피즘/글래스모피즘 UI로 만든 크리스마스 트리 롤링페이퍼
-                애플리케이션입니다. 친구들과 함께 나만의 크리스마스 트리를
-                만들고, 오너먼트와 선물을 통해 따뜻한 메시지를 주고받을 수
-                있습니다.
+            <div class="pub-body">
+              <div class="pub-title">
+                집지기: An LLM Agent for Young Adults' Housing Decisions with RDB-RAG
+              </div>
+              <div class="pub-authors">
+                <em>Team 똘똘한 최</em> · Text-to-SQL based RDB-RAG, senior-deposit
+                estimation model for jeonse-fraud risk
+              </div>
+              <div class="pub-venue">
+                <em>8th KB Future Finance AI Challenge</em>,
+                <span class="pub-highlight">Excellence Award</span>
+              </div>
+              <p class="pub-note">
+                Listing-retrieval accuracy 70% → 96% · 30 interviews with brokers and tenants
               </p>
-              <div class="project-tech">
-                <span class="tech-tag">Next.js</span>
-                <span class="tech-tag">TypeScript</span>
-                <span class="tech-tag">Tailwind CSS</span>
-                <span class="tech-tag">Framer Motion</span>
-                <span class="tech-tag">Supabase</span>
+              <div class="pub-links">
+                <a class="btn-link" href="https://www.leadeconomy.co.kr/news/articleView.html?idxno=9543" target="_blank" rel="noopener">News</a>
+                <a class="btn-link" href="https://youtu.be/028Z1jpgcko?si=X0gli0tynEkQEVTn" target="_blank" rel="noopener">Video</a>
               </div>
             </div>
-          </div>
-          <div class="project-card">
-            <div class="project-image xai-aml-bg">
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a
-                    href="https://github.com/yelim8902/XAI_AML"
-                    class="project-link"
-                    target="_blank"
-                    ><i class="fab fa-github"></i
-                  ></a>
-                </div>
+          </li>
+
+          <li class="pub">
+            <div class="pub-preview">
+              <span class="pub-abbr">SOFTCON</span>
+              <img
+                src="assets/images/proj-xai.jpg"
+                alt="XAI_AML preview"
+                loading="lazy"
+              />
+            </div>
+            <div class="pub-body">
+              <div class="pub-title">
+                XAI-AML: Explainable Suspicious Transaction Detection and Automated STR Report Generation
+              </div>
+              <div class="pub-authors">
+                SHAP/LIME explanations over a LightGBM detector, summarized into
+                template-based STR reports
+              </div>
+              <div class="pub-venue">
+                <em>AJOU SOFTCON 2025, SW Fundamentals Track</em>,
+                <span class="pub-highlight">Grand Prize</span>
+              </div>
+              <div class="pub-links">
+                <a class="btn-link" href="https://github.com/yelim8902/XAI_AML" target="_blank" rel="noopener">Code</a>
               </div>
             </div>
-            <div class="project-content">
-              <h3>XAI_AML - 의심거래 탐지 시스템</h3>
-              <p>
-                SHAP/LIME 기반 XAI를 활용한 금융 거래 이상탐지 및 STR 보고서
-                자동 생성 시스템
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">LightGBM</span>
-                <span class="tech-tag">SHAP</span>
-                <span class="tech-tag">Pandas</span>
-                <span class="tech-tag">Scikit-learn</span>
-              </div>
+          </li>
+        </ol>
+
+        <h3 class="subsection-title">other projects</h3>
+        <ul class="plain-list">
+          <li>
+            <span class="item-title">Blog Study Certification DApp (with DAO)</span>
+            — smart-contract based proof-of-study and deposit management.
+            <span class="item-meta">Solidity · Web3.js · IPFS</span>
+            <a class="inline-link" href="https://github.com/yelim8902/blog-study-certification-dapp" target="_blank" rel="noopener">[code]</a>
+          </li>
+          <li>
+            <span class="item-title">Dividend Stock Simulation</span>
+            — dividend investing simulation and portfolio optimization.
+            <span class="item-meta">Python · Pandas · NumPy</span>
+            <a class="inline-link" href="https://github.com/yelim8902/DividendStock-simulation" target="_blank" rel="noopener">[code]</a>
+          </li>
+          <li>
+            <span class="item-title">Car-ia</span>
+            — blockchain-based P2P car-sharing platform with KRW-stablecoin payments.
+            <span class="item-meta">React · Stablecoin</span>
+            <a class="inline-link" href="https://youtu.be/Pkpyuh3EIbo" target="_blank" rel="noopener">[video]</a>
+          </li>
+          <li>
+            <span class="item-title">Christmas Rolling Paper</span>
+            — collaborative message-board web app.
+            <span class="item-meta">Next.js · TypeScript · Supabase</span>
+            <a class="inline-link" href="https://github.com/yelim8902/X-mas" target="_blank" rel="noopener">[code]</a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Awards -->
+      <section id="awards" class="section">
+        <h2 class="section-title">awards &amp; honors</h2>
+        <table class="news-table awards-table">
+          <tbody>
+            <tr>
+              <th scope="row">2026</th>
+              <td>
+                <strong>Excellence Award</strong>, 8th KB Future Finance AI Challenge
+                <span class="item-meta">KB Kookmin Bank</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2025</th>
+              <td>
+                <strong>Excellence Award</strong>, AJOU SOFTCON 2025-2 (Research Track)
+                <span class="item-meta">Ajou University</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2025</th>
+              <td>
+                <strong>Award</strong>, Paran Semester Program (Team 말해뭐해, TRACE-X)
+                <span class="item-meta">Ajou University</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2025</th>
+              <td>
+                <strong>Grand Prize</strong>, AJOU SOFTCON 2025 (SW Fundamentals)
+                <span class="item-meta">Ajou University</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2025</th>
+              <td>
+                <strong>Excellence Award</strong>, 5th SW Convergence Startup Camp
+                <span class="item-meta">Kyung Hee University</span>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2024</th>
+              <td>
+                <strong>4th Place</strong>, Future Library Policy Idea Hackathon
+                <span class="item-meta">NIA</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Education -->
+      <section id="education" class="section">
+        <h2 class="section-title">education</h2>
+        <ul class="cv-list">
+          <li class="cv-item">
+            <div class="cv-head">
+              <span class="cv-title">Ajou University</span>
+              <span class="cv-date">Mar 2023 – Present</span>
             </div>
-          </div>
-          <div class="project-card">
-            <div class="project-image blog-dapp-bg">
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a
-                    href="https://github.com/yelim8902/blog-study-certification-dapp.git"
-                    class="project-link"
-                    target="_blank"
-                    ><i class="fab fa-github"></i
-                  ></a>
-                </div>
-              </div>
+            <div class="cv-sub">B.S. in Software and Computer Engineering</div>
+          </li>
+          <li class="cv-item">
+            <div class="cv-head">
+              <span class="cv-title">AJOU × AWS Cloud Camp</span>
+              <span class="cv-date">Mar 2026</span>
             </div>
-            <div class="project-content">
-              <h3>Blog Study Certification Dapp (with DAO)</h3>
-              <p>
-                블록체인 기반 학습 인증 및 DAO 보증금 플랫폼 - 스마트 컨트랙트를
-                통한 학습 증명 & 보증금 관리 플랫폼
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">Solidity</span>
-                <span class="tech-tag">Web3.js</span>
-                <span class="tech-tag">Ethereum</span>
-                <span class="tech-tag">IPFS</span>
-                <span class="tech-tag">MetaMask</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="project-image" style="background-image: url('assets/images/배당.png'); background-size: cover; background-position: center;">
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a
-                    href="https://github.com/yelim8902/DividendStock-simulation"
-                    class="project-link"
-                    target="_blank"
-                    ><i class="fab fa-github"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3>Dividend Stock Simulation</h3>
-              <p>
-                배당주 투자 시뮬레이션 및 포트폴리오 최적화를 위한 데이터 분석
-                프로젝트
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Pandas</span>
-                <span class="tech-tag">NumPy</span>
-                <span class="tech-tag">Matplotlib</span>
-                <span class="tech-tag">Seaborn</span>
-              </div>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="project-image caria-bg">
-              <div class="project-overlay">
-                <div class="project-links">
-                  <a
-                    href="https://youtu.be/Pkpyuh3EIbo?si=VVxaOLltM5ghwVA2&utm_source=chatgpt.com"
-                    class="project-link"
-                    target="_blank"
-                    ><i class="fab fa-youtube"></i
-                  ></a>
-                </div>
-              </div>
-            </div>
-            <div class="project-content">
-              <h3>Car-ia - P2P 카셰어링 플랫폼</h3>
-              <p>
-                블록체인 기반 P2P 카셰어링 플랫폼 기획 및 프론트엔드 구현, 원화
-                스테이블코인 결제 구조 설계
-              </p>
-              <div class="project-tech">
-                <span class="tech-tag">Blockchain</span>
-                <span class="tech-tag">Stablecoin</span>
-                <span class="tech-tag">Frontend</span>
-                <span class="tech-tag">P2P</span>
-                <span class="tech-tag">React</span>
-              </div>
-            </div>
-          </div>
+            <div class="cv-sub">Completed · Cloud9, Lambda, EC2</div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section">
+        <h2 class="section-title">skills</h2>
+        <dl class="skills-list">
+          <dt>Languages</dt>
+          <dd>Python, JavaScript/TypeScript, Java, C/C++, Solidity, R</dd>
+          <dt>ML / Data</dt>
+          <dd>scikit-learn, LightGBM, SHAP, Pandas, NumPy</dd>
+          <dt>Web / Infra</dt>
+          <dd>React, Next.js, Node.js, MySQL, AWS, Git</dd>
+        </dl>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section contact">
+        <div class="social">
+          <a href="mailto:yelim2849@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://github.com/yelim8902" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/yelim-lee-80899a305/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="https://zingangyyy.tistory.com/" target="_blank" rel="noopener" aria-label="Tech blog"><i class="fas fa-pen-to-square"></i></a>
+          <a href="https://blog.naver.com/lyl2849" target="_blank" rel="noopener" aria-label="Naver blog"><i class="fas fa-book-open"></i></a>
         </div>
-      </div>
-    </section>
+        <p class="contact-note">
+          The best way to reach me is via
+          <a href="mailto:yelim2849@gmail.com">yelim2849@gmail.com</a>.
+        </p>
+      </section>
+    </main>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Skills</h2>
-        </div>
-        <div class="skills-grid">
-          <div class="skill-category">
-            <h3>Programming</h3>
-            <div class="skill-items">
-              <div class="skill-item"><i class="fab fa-python"></i> Python</div>
-              <div class="skill-item"><i class="fab fa-js"></i> JavaScript</div>
-              <div class="skill-item"><i class="fab fa-java"></i> Java</div>
-              <div class="skill-item"><i class="fas fa-code"></i> C/C++</div>
-              <div class="skill-item"><i class="fas fa-cube"></i> Solidity</div>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Database & Tools</h3>
-            <div class="skill-items">
-              <div class="skill-item"><i class="fas fa-database"></i> MySQL</div>
-              <div class="skill-item"><i class="fab fa-git-alt"></i> Git</div>
-              <div class="skill-item"><i class="fab fa-github"></i> GitHub</div>
-              <div class="skill-item"><i class="fab fa-aws"></i> AWS</div>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Web Development</h3>
-            <div class="skill-items">
-              <div class="skill-item"><i class="fab fa-react"></i> React</div>
-              <div class="skill-item"><i class="fab fa-html5"></i> HTML/CSS</div>
-              <div class="skill-item"><i class="fab fa-node-js"></i> Node.js</div>
-            </div>
-          </div>
-          <div class="skill-category">
-            <h3>Design</h3>
-            <div class="skill-items">
-              <div class="skill-item"><i class="fas fa-pen-nib"></i> Photoshop</div>
-              <div class="skill-item"><i class="fas fa-bezier-curve"></i> Illustrator</div>
-              <div class="skill-item"><i class="fab fa-figma"></i> Figma</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Awards Section -->
-    <section id="awards" class="awards">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Awards</h2>
-        </div>
-        <div class="awards-grid">
-          <div class="award-card">
-            <div class="award-image">
-              <img src="assets/images/KB국민은행_우수상.jpg" alt="제8회 KB Future Finance AI Challenge 우수상" loading="lazy" />
-            </div>
-            <div class="award-header">
-              <div class="award-content">
-                <h3>
-                  <a
-                    href="https://www.leadeconomy.co.kr/news/articleView.html?idxno=9543"
-                    target="_blank"
-                    rel="noopener"
-                    >제8회 KB Future Finance AI Challenge</a
-                  >
-                </h3>
-                <div class="award-meta">
-                  <span class="award-organization">KB국민은행</span>
-                  <span class="award-date">2026.09.02</span>
-                </div>
-              </div>
-              <div class="award-level">
-                <span class="award-badge">우수상</span>
-              </div>
-            </div>
-            <div class="award-description">
-              <ul>
-                <li>청년 주거 의사결정 AI 에이전트 '집지기' 개발 (팀명: 똘똘한 최)</li>
-                <li>Text-to-SQL 기반 RDB-RAG로 매물 검색 정확도 70% → 96% 개선</li>
-                <li>공인중개사·청년 30명 인터뷰로 전세사기 위험 도출 및 선순위 보증금 추정 모델 설계</li>
-                <li><a href="https://youtu.be/028Z1jpgcko?si=X0gli0tynEkQEVTn" target="_blank" rel="noopener">데모 영상 보기 →</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="award-card">
-            <div class="award-image">
-              <img src="assets/images/자주연_썸네일.jpg" alt="2025-2 AJOU SOFTCON 연구부문 수상" loading="lazy" />
-            </div>
-            <div class="award-header">
-              <div class="award-content">
-                <h3>
-                  <a
-                    href="https://softcon.ajou.ac.kr/works/works.asp?uid=2250"
-                    target="_blank"
-                    rel="noopener"
-                    >2025-2 AJOU SOFTCON 연구부문</a
-                  >
-                </h3>
-                <div class="award-meta">
-                  <span class="award-organization">아주대학교 SW융합교육원</span>
-                  <span class="award-date">2025.12.04</span>
-                </div>
-              </div>
-              <div class="award-level">
-                <span class="award-badge">우수상</span>
-              </div>
-            </div>
-            <div class="award-description">
-              <ul>
-                <li>Rule-Based Scoring과 Graph Pattern Analysis를 통합한 2단계 하이브리드 블록체인 AML 탐지 시스템</li>
-              </ul>
-            </div>
-          </div>
-          <div class="award-card">
-            <div class="award-image">
-              <img src="assets/images/SW기초교육_소프트콘_수상.jpg" alt="2025 AJOU SOFTCON SW기초교육 수상" loading="lazy" />
-            </div>
-            <div class="award-header">
-              <div class="award-content">
-                <h3>
-                  <a href="https://github.com/yelim8902/XAI_AML" target="_blank" rel="noopener"
-                    >2025 AJOU SOFTCON (SW 기초교육)</a>
-                </h3>
-                <div class="award-meta">
-                  <span class="award-organization">아주대학교 SW융합교육원</span>
-                  <span class="award-date">2025.09.30</span>
-                </div>
-              </div>
-              <div class="award-level">
-                <span class="award-badge">최우수상</span>
-              </div>
-            </div>
-            <div class="award-description">
-              <ul>
-                <li>SHAP-XAI 기반 STR 보고서 자동화 시스템 설계/구현</li>
-                <li>이상거래 탐지 근거 요약 및 템플릿 기반 보고서 생성 자동화</li>
-              </ul>
-            </div>
-          </div>
-          <div class="award-card">
-            <div class="award-image">
-              <img src="assets/images/파토시마이너_인증서.jpeg" alt="SW융합창업캠프 우수상" loading="lazy" />
-            </div>
-            <div class="award-header">
-              <div class="award-content">
-                <h3>2025년 제 5회 SW융합창업캠프</h3>
-                <div class="award-meta">
-                  <span class="award-organization">경희대학교 SW중심대학사업단</span>
-                  <span class="award-date">2025.07.05</span>
-                </div>
-              </div>
-              <div class="award-level">
-                <span class="award-badge">우수상</span>
-              </div>
-            </div>
-            <div class="award-description">
-              <ul>
-                <li>암표 원천 차단 블록체인 기반 NFT 티켓팅 플랫폼 '트러스티켓' 제안</li>
-                <li>팀 리더로서 DID 인증과 NFT 티켓을 결합한 암표 방지 솔루션의 전체 아키텍처 설계 주도</li>
-                <li>교육부, 과기부 공동 주관 '2025 학생창업유망팀 300+' 선정 (팀명: 파토시마이너)</li>
-              </ul>
-            </div>
-          </div>
-          <div class="award-card">
-            <div class="award-image">
-              <img src="assets/images/6.2024미래도서관정책아이디어해커톤_입상.jpg" alt="미래도서관 정책 아이디어 해커톤 입상" loading="lazy" />
-            </div>
-            <div class="award-header">
-              <div class="award-content">
-                <h3>미래도서관 정책 아이디어 해커톤</h3>
-                <div class="award-meta">
-                  <span class="award-organization">한국정보화진흥원 주관</span>
-                  <span class="award-date">2024.04.12</span>
-                </div>
-              </div>
-              <div class="award-level">
-                <span class="award-badge">입상(4등)</span>
-              </div>
-            </div>
-            <div class="award-description">
-              <ul>
-                <li>고령층 디지털정보격차 데이터(NIA) 기반 3차원 군집분석</li>
-                <li>군집별 특성에 따라 맞춤형 정책 제안 및 시각화</li>
-              </ul>
-            </div>
-          </div>
-          <div class="award-card">
-            <div class="award-image">
-              <img src="assets/images/파란학기2.JPG" alt="파란학기제 말해뭐해 팀 입상" loading="lazy" />
-            </div>
-            <div class="award-header">
-              <div class="award-content">
-                <h3>2026-2 파란학기제 말해뭐해 팀</h3>
-                <div class="award-meta">
-                  <span class="award-organization">아주대학교 교무혁신처장 장우진</span>
-                  <span class="award-date">2025.12.11</span>
-                </div>
-              </div>
-              <div class="award-level">
-                <span class="award-badge">입상</span>
-              </div>
-            </div>
-            <div class="award-description">
-              <ul>
-                <li>도전과제: Cross-Chain Stablecoin Pre-Detection Service Trace-X</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Activities Section -->
-    <section id="activities" class="activities">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Activities</h2>
-        </div>
-        <div class="activities-timeline">
-
-          <div class="activity-timeline-item">
-            <div class="activity-header">
-              <div class="activity-icon-box">
-                <i class="fas fa-cloud-sun"></i>
-              </div>
-              <div class="activity-timeline-details">
-                <h3>㈜인이지 AI Research Intern</h3>
-                <p class="activity-org">연구2팀 | 2026.09 ~ 현재</p>
-              </div>
-              <div class="activity-badge active">
-                <span class="activity-year">재직 중</span>
-              </div>
-            </div>
-            <ul class="activity-points">
-              <li>기상 예보 지원 AI 에이전트 개발 과제 참여</li>
-              <li>일기도 판독 VLM 학습 데이터 구축 및 검증</li>
-              <li>관측값-이미지 위치 매칭 로직 개선 (매칭률 17% → 81.6%)</li>
-              <li>기온값 추출 CNN 학습(95.2%) 및 성능 병목 분석</li>
-            </ul>
-          </div>
-
-          <div class="activity-timeline-item">
-            <div class="activity-header">
-              <div class="activity-icon-box">
-                <i class="fas fa-microscope"></i>
-              </div>
-              <div class="activity-timeline-details">
-                <h3>Ilab 김기형 교수님 학부연구생</h3>
-                <p class="activity-org">아주대학교 Ilab | 2026.03 ~ 진행</p>
-              </div>
-              <div class="activity-badge active">
-                <span class="activity-year">진행중</span>
-              </div>
-            </div>
-            <ul class="activity-points">
-              <li>블록체인 이상거래 탐지 프로젝트 진행 중</li>
-            </ul>
-          </div>
-
-          <div class="activity-timeline-item">
-            <div class="activity-header">
-              <div class="activity-icon-box">
-                <i class="fas fa-chart-line"></i>
-              </div>
-              <div class="activity-timeline-details">
-                <h3>금융프랜즈</h3>
-                <p class="activity-org">2026.03 ~ 진행</p>
-              </div>
-              <div class="activity-badge active">
-                <span class="activity-year">진행중</span>
-              </div>
-            </div>
-            <ul class="activity-points">
-              <li>금융 정책 소개 유튜브 활동</li>
-            </ul>
-          </div>
-
-          <div class="activity-timeline-item">
-            <div class="activity-header">
-              <div class="activity-icon-box">
-                <i class="fas fa-cloud"></i>
-              </div>
-              <div class="activity-timeline-details">
-                <h3>AJOU x AWS Cloud Camp 수료</h3>
-                <p class="activity-org">아주대학교 | 2026.03.28</p>
-              </div>
-              <div class="activity-badge completed">
-                <span class="activity-year">2026.03</span>
-              </div>
-            </div>
-            <ul class="activity-points">
-              <li>AWS 클라우드 서비스 학습 및 직접 배포 실습 (Cloud9, Lambda, EC2)</li>
-            </ul>
-          </div>
-
-          <div class="activity-timeline-item">
-            <div class="activity-header">
-              <div class="activity-icon-box">
-                <i class="fas fa-cube"></i>
-              </div>
-              <div class="activity-timeline-details">
-                <h3>연세대 블록체인 소학회 Bay 16기</h3>
-                <p class="activity-org">연세대학교 소학회 Bay | 2025.07 ~ 진행</p>
-              </div>
-              <div class="activity-badge active">
-                <span class="activity-year">진행중</span>
-              </div>
-            </div>
-            <ul class="activity-points">
-              <li>크립토 모니터링 세션 리드</li>
-              <li>DeFi/AML 최신 동향 연구 및 학술 교류</li>
-              <li>블록체인 컨트랙트 개발 및 운영, 해커톤 참여</li>
-              <li>개발 및 리서치 팀 활동 - 블록체인 보안 사고 관련 미디엄 작성</li>
-            </ul>
-          </div>
-
-          <div class="activity-timeline-item">
-            <div class="activity-header">
-              <div class="activity-icon-box">
-                <i class="fas fa-seedling"></i>
-              </div>
-              <div class="activity-timeline-details">
-                <h3>Paletting – 가치관 기반 소개팅 플랫폼</h3>
-                <p class="activity-org">개인 창업 | 2023.08 ~ 2023.12</p>
-              </div>
-              <div class="activity-badge completed">
-                <span class="activity-year">2023.12</span>
-              </div>
-            </div>
-            <ul class="activity-points">
-              <li>가치관 설문 데이터를 활용한 매칭 알고리즘 기획</li>
-              <li>SNS 마케팅으로 150명+ 사용자 확보</li>
-              <li>4인 팀 리딩, 서비스 기획·디자인·운영 총괄</li>
-            </ul>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-      <div class="container">
-        <div class="section-header">
-          <h2 class="section-title">Contact</h2>
-          <p class="section-subtitle">궁금한 것이 있다면 언제든 연락주세요</p>
-        </div>
-        <div class="contact-content">
-          <div class="contact-info">
-            <div class="contact-item">
-              <i class="fas fa-envelope"></i>
-              <div>
-                <h4>이메일</h4>
-                <p>yelim2849@gmail.com</p>
-              </div>
-            </div>
-            <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
-              <div>
-                <h4>위치</h4>
-                <p>판교, 경기도, 대한민국</p>
-              </div>
-            </div>
-            <div class="contact-social">
-              <a href="https://github.com/yelim8902" class="contact-social-link" target="_blank" rel="noopener">
-                <i class="fab fa-github"></i>
-                <span>GitHub</span>
-              </a>
-              <a href="https://www.linkedin.com/in/yelim-lee-80899a305/" class="contact-social-link" target="_blank" rel="noopener">
-                <i class="fab fa-linkedin"></i>
-                <span>LinkedIn</span>
-              </a>
-              <a href="https://zingangyyy.tistory.com/" class="contact-social-link" target="_blank" rel="noopener">
-                <i class="fas fa-pen-to-square"></i>
-                <span>기술 블로그</span>
-              </a>
-              <a href="https://blog.naver.com/lyl2849" class="contact-social-link" target="_blank" rel="noopener">
-                <i class="fas fa-book-open"></i>
-                <span>일상 블로그</span>
-              </a>
-            </div>
-          </div>
-          <form id="contact-form" class="contact-form">
-            <div class="form-group">
-              <input type="text" name="name" placeholder="이름" required />
-            </div>
-            <div class="form-group">
-              <input type="email" name="email" placeholder="이메일" required />
-            </div>
-            <div class="form-group">
-              <input type="text" name="subject" placeholder="제목" required />
-            </div>
-            <div class="form-group">
-              <textarea
-                name="message"
-                placeholder="메시지"
-                rows="5"
-                required
-              ></textarea>
-            </div>
-            <button type="button" class="btn btn-primary" onclick="sendEmail()">
-              메시지 보내기
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
-      <div class="container">
-        <div class="footer-top">
-          <div class="footer-brand">
-            <span class="footer-name">이예림</span>
-            <p class="footer-tagline">소프트웨어 × 금융공학 · 블록체인 · 데이터</p>
-          </div>
-          <nav class="footer-nav">
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#activities">Activities</a>
-            <a href="#awards">Awards</a>
-            <a href="#contact">Contact</a>
-          </nav>
-        </div>
-        <div class="footer-divider"></div>
-        <div class="footer-content">
-          <div class="footer-text">
-            <p>&copy; 2026 이예림. All rights reserved.</p>
-          </div>
-          <div class="social-links">
-            <a
-              href="https://github.com/yelim8902"
-              class="social-link"
-              aria-label="GitHub"
-              target="_blank"
-              rel="noopener"
-              ><i class="fab fa-github" aria-hidden="true"></i
-            ></a>
-            <a
-              href="https://www.linkedin.com/in/yelim-lee-80899a305/"
-              class="social-link"
-              aria-label="LinkedIn"
-              target="_blank"
-              rel="noopener"
-              ><i class="fab fa-linkedin" aria-hidden="true"></i
-            ></a>
-            <a
-              href="https://blog.naver.com/lyl2849"
-              class="social-link"
-              aria-label="Naver Blog"
-              target="_blank"
-              rel="noopener"
-              ><img
-                src="https://cdn.simpleicons.org/naver/ffffff"
-                alt="Naver Blog icon"
-            /></a>
-            <a
-              href="https://zingangyyy.tistory.com/"
-              class="social-link"
-              aria-label="Tistory Blog"
-              target="_blank"
-              rel="noopener"
-              ><img
-                src="https://cdn.simpleicons.org/tistory/ffffff"
-                alt="Tistory icon"
-            /></a>
-          </div>
-        </div>
-      </div>
+      © 2026 Yelim Lee. Last updated: October 2026.
     </footer>
-
 
     <script src="assets/js/main.js"></script>
   </body>
