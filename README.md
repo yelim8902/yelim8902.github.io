@@ -73,6 +73,7 @@ portfolio-website/
 | 수상 추가 | `#awards` 표에 `<tr>` 추가 |
 | 프로필 사진 교체 | `assets/images/profile/profile.jpg` 교체. 링크 미리보기용 `og-profile.jpg`(600×600)도 함께 교체 |
 | CV 수정 | `cv/cv.tex` 수정 후 `cd cv && xelatex cv.tex`로 `cv.pdf` 다시 생성 (XeLaTeX 필요) |
+| 방문자 통계 보기 | https://yelim.goatcounter.com (비공개 대시보드). 내 방문 제외: 사이트 주소 뒤에 `#toggle-goatcounter` 붙여 한 번 접속 |
 | 이미지 보관 | 안 쓰게 된 파일은 지우지 말고 `archive/` 아래로 이동 |
 
 파일 이름은 영문 소문자와 하이픈(`trace-x.jpg`)으로 맞추면 경로 문제가 생기지 않습니다.
