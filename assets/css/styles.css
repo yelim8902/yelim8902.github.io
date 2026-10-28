@@ -113,6 +113,9 @@ strong {
 }
 
 .nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   color: var(--heading);
   font-size: 1.125rem;
   font-weight: 400;
@@ -121,6 +124,14 @@ strong {
 
 .nav-brand:hover {
   text-decoration: none;
+}
+
+.brand-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 6px;
+  background: #fff;
+  object-fit: contain;
 }
 
 .nav-menu {
@@ -573,7 +584,15 @@ strong {
 }
 
 .social a {
+  display: inline-flex;
+  align-items: center;
   color: var(--text-light);
+}
+
+.icon-svg {
+  width: 0.85em;
+  height: 0.85em;
+  fill: currentColor;
 }
 
 .social a:hover {
