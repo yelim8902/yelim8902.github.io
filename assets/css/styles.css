@@ -644,7 +644,26 @@ strong {
   }
 
   .pub-preview {
-    max-width: 280px;
+    max-width: 220px;
+  }
+
+  .icon-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .news-table th {
+    width: 78px;
+    padding-right: 12px;
+  }
+
+  .awards-table th {
+    width: 48px;
+  }
+
+  .awards-table .item-meta {
+    display: block;
+    margin-left: 0;
   }
 
   .cv-head {
