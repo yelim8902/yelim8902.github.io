@@ -231,6 +231,11 @@ strong {
   letter-spacing: 0.02em;
 }
 
+.about {
+  margin-bottom: 56px;
+}
+
+.about::after,
 .about-body::after {
   content: "";
   display: block;
@@ -241,7 +246,7 @@ strong {
   float: right;
   width: 30%;
   max-width: 220px;
-  margin: 0 0 16px 32px;
+  margin: 6px 0 12px 32px;
   text-align: center;
 }
 
