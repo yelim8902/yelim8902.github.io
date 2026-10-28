@@ -72,8 +72,9 @@
   document.body.appendChild(toast);
   let timer;
 
-  function show(message) {
-    toast.textContent = message;
+  function show(message, ok) {
+    toast.innerHTML = ok ? '<i class="fas fa-circle-check" aria-hidden="true"></i>' : "";
+    toast.append(message);
     toast.classList.add("show");
     clearTimeout(timer);
     timer = setTimeout(() => toast.classList.remove("show"), 2200);
@@ -85,7 +86,7 @@
       if (navigator.clipboard) {
         navigator.clipboard
           .writeText(email)
-          .then(() => show("Copied " + email))
+          .then(() => show("Email copied: " + email, true))
           .catch(() => show(email));
       } else {
         show(email);
