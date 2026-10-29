@@ -2,7 +2,7 @@
 
 > AI agents · AI systems · blockchain security에 관심 있는 아주대학교 소프트웨어학과 학생의 홈페이지입니다.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-3182f6?style=flat-square)](https://yelim8902.github.io/portfolio-website/)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-3182f6?style=flat-square)](https://yelim8902.github.io/)
 [![GitHub](https://img.shields.io/badge/GitHub-yelim8902-181717?style=flat-square&logo=github)](https://github.com/yelim8902)
 
 ## 소개
@@ -33,7 +33,7 @@
 ## 프로젝트 구조
 
 ```
-portfolio-website/
+yelim8902.github.io/
 ├── index.html                 # 사이트 전체 (단일 페이지)
 ├── assets/
 │   ├── css/styles.css         # 색상·글꼴 토큰은 맨 위 :root / [data-theme="dark"]
@@ -45,6 +45,7 @@ portfolio-website/
 ├── cv/
 │   ├── cv.tex                 # LaTeX CV 원본
 │   └── cv.pdf                 # 빌드 결과 (사이트 메뉴 "CV"가 이 파일을 엶)
+├── portfolio-website/         # 예전 주소(/portfolio-website/)를 새 주소로 넘겨주는 리다이렉트
 ├── archive/                   # 지금은 사이트에서 안 쓰지만 보관하는 파일
 │   ├── images/                # 수상 사진·상장, 예전 프로젝트 썸네일, 예전 프로필
 │   ├── docs/                  # 발표 자료, 상장 PDF
@@ -81,8 +82,8 @@ portfolio-website/
 ## 로컬 실행
 
 ```bash
-git clone https://github.com/yelim8902/portfolio-website.git
-cd portfolio-website
+git clone https://github.com/yelim8902/yelim8902.github.io.git
+cd yelim8902.github.io
 
 # VS Code Live Server 또는
 python -m http.server 8000
