@@ -1,6 +1,6 @@
 # 이예림 포트폴리오
 
-> AI agents · AI systems · blockchain security에 관심 있는 아주대학교 소프트웨어학과 학생의 홈페이지입니다.
+> 금융 등 high-stakes 분야의 신뢰할 수 있는 AI에 관심 있는 아주대학교 소프트웨어학과 학생의 홈페이지입니다.
 
 [![Live Demo](https://img.shields.io/badge/Live-Demo-3182f6?style=flat-square)](https://yelim8902.github.io/)
 [![GitHub](https://img.shields.io/badge/GitHub-yelim8902-181717?style=flat-square&logo=github)](https://github.com/yelim8902)

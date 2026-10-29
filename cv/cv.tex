@@ -62,15 +62,14 @@
 % --- About ------------------------------------------------------------------
 
 \cvsection{About}
-I am an undergraduate student in Software and Computer Engineering at Ajou University, currently working as an AI Research Intern at INEEJI on AI agents that read weather charts for forecasters.
-I am interested in \emph{AI agents}, \emph{AI systems}, and \emph{blockchain security}, and more broadly in building technology that people can trust.
-I also enjoy sharing what I learn and talking with others about it.
+I am an undergraduate in Software and Computer Engineering at Ajou University, currently working as an AI Research Intern at INEEJI on agents that read weather charts for forecasters.
+I am interested in \emph{trustworthy AI for finance and other high-stakes domains}---AI agents whose answers can be checked against their sources, and explainable AML and compliance systems for blockchain.
 
 % --- Education --------------------------------------------------------------
 
 \cvsection{Education}
 \entry{Ajou University}{Mar 2023 -- Present}{B.S. in Software and Computer Engineering}
-{\itshape MicroDegree in Blockchain Programming}\par
+{\itshape MicroDegree in Blockchain Programming (Beginner)}\par
 
 % --- Experience -------------------------------------------------------------
 
@@ -78,8 +77,8 @@ I also enjoy sharing what I learn and talking with others about it.
 
 \entry{AI Research Intern, \href{https://www.ineeji.com/}{INEEJI}}{Sep 2026 -- Present}{Research Team 2 · AlphaWeather, an AI assistant for weather forecasters}
 \begin{points}
-  \item Designed a background-removal preprocessing tool based on cropping, color separation, and brightness, raising recognition accuracy of high/low-pressure locations and values on weather charts from 24.9\% to 99.7\% (vs.\ Gemma without the tool).
-  \item Diagnosed the crop-range bottleneck of a CNN that extracts station temperatures from weather charts, improving accuracy from 72.7\% to 90.4\% (GPT-4o 48\%, Gemini 62\% under the same conditions).
+  \item Designed a background-removal preprocessing tool based on cropping, color separation, and brightness, raising Gemma's recognition accuracy of high/low-pressure locations and values on weather charts from 24.9\% (Gemma alone) to 99.7\% (with the tool).
+  \item Diagnosed the crop-range bottleneck of a CNN that extracts station temperatures from weather charts, improving accuracy from 72.7\% to 90.4\%; on the same task, GPT-4o and Gemini reached 48\% and 62\%.
   \item Experimenting with fine-tuning open-source Gemma and tool calling for air-gapped deployment, toward a common model that works across chart types (in progress).
   \item Reviewed a rubric-based VQA evaluation set and built an automated QA-generation pipeline to evaluate and improve answer accuracy.
 \end{points}
