@@ -77,11 +77,10 @@ I also enjoy sharing what I learn and talking with others about it.
 
 \entry{AI Research Intern, \href{https://www.ineeji.com/}{INEEJI}}{Sep 2026 -- Present}{Research Team 2 · AlphaWeather, an AI assistant for weather forecasters}
 \begin{points}
-  \item Improved weather-chart reading with color-separation and brightness preprocessing.
-  \item Improved observation-to-image location matching from 17\% to 81.6\%.
-  \item Trained a CNN for temperature-value extraction (95.2\% accuracy) and analyzed its bottlenecks; built and validated VLM training data for chart reading.
-  \item Experimented with fine-tuning open-source Gemma and tool calling in an air-gapped environment, toward a model that works across chart types (in progress).
-  \item Designed and built a rubric-based VQA dataset to evaluate and improve generation accuracy.
+  \item Designed a background-removal preprocessing tool based on cropping, color separation, and brightness, raising recognition accuracy of high/low-pressure locations and values on weather charts from 24.9\% to 99.7\% (vs.\ Gemma without the tool).
+  \item Diagnosed the crop-range bottleneck of a CNN that extracts station temperatures from weather charts, improving accuracy from 72.7\% to 90.4\% (GPT-4o 48\%, Gemini 62\% under the same conditions).
+  \item Experimenting with fine-tuning open-source Gemma and tool calling for air-gapped deployment, toward a common model that works across chart types (in progress).
+  \item Reviewed a rubric-based VQA evaluation set and built an automated QA-generation pipeline to evaluate and improve answer accuracy.
 \end{points}
 
 \entry{Reporter, Financial Friends}{Apr 2026 -- Present}{\href{https://www.youtube.com/@FSCKorea}{Financial Services Commission} (\ko{금융위원회})}
